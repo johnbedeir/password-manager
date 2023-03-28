@@ -1,7 +1,7 @@
 # password-manager
 
 <p align="center">
-  <img src="imgs/logo.png" style="max-width: 100px">
+  <img src="imgs/logo.png" style="width: 150px">
 </p>
 
 This application is a free password manager where you add the `NAME` and the `EMAIL` then a `PASSWORD` will be generated and stored in the `MONGODB` database.
