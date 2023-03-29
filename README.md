@@ -11,18 +11,27 @@ This application is a free password manager where you add the `NAME` and the `EM
  1. [Instal MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
  2. [Install Studio3T](https://studio3t.com/knowledge-base/articles/installation/)
  3. Make sure `MongoDB` is installed and running on `localhost:27017`
- 4. Open `Studio3T` application and connect to `mongodb://localhost:27017`
+### Open `Studio3T` application and connect to `mongodb://localhost:27017`
 
  <img src="imgs/1.png" width="400px">
 
- 5. Connect to the database
+### Connect to the database
 
   <img src="imgs/2.png" width="400px">
   <img src="imgs/3.png" width="400px">
 
-Run the application using the `pass-gen` file:
+### Install [GoLang](https://go.dev/doc/install)
+
+### Build the application using the following commands:
+
+`NOTE:` Make sure Go is installed by running `go version`
 ```
-./pass-gen
+go mod tidy
+go build main.go
+```
+### Run the app:
+```
+./main
 ```
 
 Output:
