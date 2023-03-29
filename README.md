@@ -41,5 +41,4 @@ Enter user name: mail@gmail.com
 Generated password: k6:9CPgc&\-BH3*L
 Password stored in MongoDB database with name gmail in collection passwords
 ```
-
 <img src="imgs/4.png" width="500px">
