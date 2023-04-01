@@ -51,6 +51,12 @@ This will ask you about the name of the `Password` you would like to `Decrypt` a
 
 `NOTE:` Make sure Go is installed by running `go version`
 
+`NOTE:` You can update the encrypt key in the `encrypt.go` that will be used in the encryption process.
+
+```
+const encryptKey = "znq2cnz9rja_WFW_cda"
+```
+
 This will create 2 executable files one to generate the password and the other one to decrypt it.
 
 ```

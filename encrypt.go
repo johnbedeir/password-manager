@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-const encryptKey = "your-encryption-key"
+const encryptKey = "znq2cnz9rja_WFW_cda"
 
 func encryptDecrypt(input, key string) string {
 	output := make([]byte, len(input))
