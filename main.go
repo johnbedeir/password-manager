@@ -38,6 +38,7 @@ func generatePass() string {
 	return pw.String()
 }
 
+// Connect to Database and store the data
 func databaseConnect(pwName, uName, password string) (*mongo.Collection, error) {
 	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
 	client, err := mongo.Connect(context.Background(), clientOptions)
@@ -54,7 +55,8 @@ func databaseConnect(pwName, uName, password string) (*mongo.Collection, error) 
 		Password string `bson:"password"`
 	}
 
-	_, err = collection.InsertOne(context.Background(), bson.M{"name": pwName, "username": uName, "password": password})
+	encryptedPassword := encrypt(password)
+	_, err = collection.InsertOne(context.Background(), bson.M{"name": pwName, "username": uName, "password": encryptedPassword})
 	if err != nil {
 		return nil, err
 	}
