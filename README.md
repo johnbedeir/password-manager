@@ -4,7 +4,7 @@
   <img src="imgs/logo.png" style="width: 150px">
 </p>
 
-This application is a free password manager where you add the `NAME` and the `EMAIL` then a `PASSWORD` will be generated and stored in the `MONGODB` database.
+This application is a free password manager where you add the `NAME` and the `EMAIL` then a `PASSWORD` will be generated and `Encrypted` before storing it in the `MONGODB` database.
 
 ### Steps to run the application:
 
@@ -20,25 +20,41 @@ This application is a free password manager where you add the `NAME` and the `EM
   <img src="imgs/2.png" width="400px">
   <img src="imgs/3.png" width="400px">
 
-### Install [GoLang](https://go.dev/doc/install)
-
-### Build the application using the following commands:
-
-`NOTE:` Make sure Go is installed by running `go version`
+### Run the App:
 ```
-go mod tidy
-go build main.go
+./passgen
 ```
-### Run the app:
-```
-./main
-```
-
 Output:
 ```
 Enter name for the password: gmail
 Enter user name: mail@gmail.com
-Generated password: k6:9CPgc&\-BH3*L
+Generated password: n@4^lM%6-f,NdkB3
 Password stored in MongoDB database with name gmail in collection passwords
 ```
+The `Password` will be `Encrypted` as shown in the database:
+
+ <img src="imgs/5.png" width="400px">
+
+### For `Password Decryption` run the following:
+```
+./decrypt
+```
+This will ask you about the name of the `Password` you would like to `Decrypt` and it will be revealed in the terminal as shown.
+
+ <img src="imgs/6.png" width="600px">
+
 <img src="imgs/4.png" width="500px">
+
+### To build the application:
+
+### Install [GoLang](https://go.dev/doc/install)
+
+`NOTE:` Make sure Go is installed by running `go version`
+
+This will create 2 executable files one to generate the password and the other one to decrypt it.
+
+```
+go mod tidy
+go build main.go encrypt.go
+go build decrypt.go encrypt.go
+```
